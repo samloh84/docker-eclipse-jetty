@@ -34,6 +34,7 @@ popd && \
 rm -rf ${TEMP_DIR_ROOT}
 
 
+ENV JAVA ${JAVA_HOME}/bin/java
 ENV JETTY_HOME ${INSTALL_DIR}
 ENV PATH ${JETTY_HOME}/bin:${PATH}
 
@@ -44,7 +45,7 @@ EXPOSE 8443
 
 WORKDIR ${JETTY_HOME}
 
-CMD ${JETTY_HOME}/bin/jetty.sh start
+CMD ${JETTY_HOME}/bin/jetty.sh run
 
 
 
